@@ -4,7 +4,72 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rock Paper Scissors Lizard Spock</title>
+    <title>Rock, Paper, Scissors, Lizard, Spock - Play Online!</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <header>
+      <h1>Rock Paper Scissors Lizard Spock</h1>
+    </header>
+
+    <div class="intro">
+      <div class="rules">
+        <h2>RULES</h2>
+        <br />
+        <p>
+          Scissors cuts Paper<br />
+          Paper covers Rock<br />
+          Rock crushes Lizard<br />
+          Lizard poisons Spock<br />
+          Spock smashes Scissors<br />
+          Scissors decapitates Lizard<br />
+          Lizard eats Paper<br />
+          Paper disproves Spock<br />
+          Spock vaporizes Rock<br />
+          Rock crushes Scissors
+        </p>
+      </div>
+      <button>Ready? Play!</button>
+    </div>
+
+    <div class="game fadeOut">
+      <div class="scoreboard">
+        <button class="scoreBtn" id="userScoreBtn">You</button>
+        <button>
+          <span id="userScore">0</span> - <span id="computerScore">0</span>
+        </button>
+        <button class="scoreBtn" id="computerScoreBtn">Computer</button>
+      </div>
+
+      <h1 class="result">Take Your Pick...</h1>
+
+      <div class="options">
+        <button class="option" id="rock">
+          ROCK <i class="fas fa-hand-rock fa-3x" id="rock"></i>
+        </button>
+        <button class="option" id="paper">
+          PAPER <i class="fas fa-hand-paper fa-3x" id="paper"></i>
+        </button>
+        <button class="option" id="scissors">
+          SCISSORS <i class="fas fa-hand-scissors fa-3x" id="scissors"></i>
+        </button>
+        <button class="option" id="lizard">
+          LIZARD <i class="fas fa-hand-lizard fa-3x" id="lizard"></i>
+        </button>
+        <button class="option" id="spock">
+          SPOCK <i class="fas fa-hand-spock fa-3x" id="spock"></i>
+        </button>
+      </div>
+
+      <button class="restartBtn" id="restartBtn">Restart</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>

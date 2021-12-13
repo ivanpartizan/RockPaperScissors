@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600&family=Ubuntu+Condensed&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0f1115;
+  color: #00ffdb;
+  font-family: "Ubuntu Condensed", sans-serif;
+}
+
+header {
+  background: #00ffdb;
+  color: #0f1115;
+}
+
+header h1 {
+  padding: 20px;
+  font-size: 5vh;
+  letter-spacing: 2px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.rules {
+  display: flex;
+  flex-direction: column;
+}
+
+.rules h2 {
+  text-align: center;
+  font-weight: bold;
+}
+
+.rules p {
+  text-align: center;
+  font-size: 2vh;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.intro {
+  margin-top: 1%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  transition: opacity 0.5s ease;
+}
+
+.game {
+  width: 80vw;
+  height: 66vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  transition: opacity 2s ease;
+}
+
+.intro button,
+.game button {
+  font-family: "Ubuntu Condensed", sans-serif;
+  padding: 15px 20px;
+  width: 166px;
+  height: 50px;
+  border: transparent;
+  border-radius: 10px;
+  outline: none;
+  background: #00ffdb;
+  color: #0f1115;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.intro button:hover,
+.game button:hover {
+  background: rgba(0, 255, 219, 0.75);
+}
+
+.options {
+  display: flex;
+}
+
+.options button {
+  height: 66px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1%;
+}
+
+.scoreboard {
+  width: 66vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+
+.scoreboard button {
+  font-family: "Orbitron", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1%;
+}
+
+.restartBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1.result {
+  text-align: center;
+}
+
+div.fadeOut {
+  opacity: 0;
+  pointer-events: none;
+}
+
+div.fadeIn {
+  opacity: 1;
+  pointer-events: all;
+}
+
+@media (max-width: 800px) {
+  .game {
+    top: 60%;
+  }
+
+  .scoreboard {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .scoreboard button {
+    margin: 1%;
+  }
+
+  .options {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .options button {
+    height: 50px;
+  }
+
+  .options button i {
+    font-size: 20px;
+  }
+}
+
+@media (max-height: 600px) {
+  .game button {
+    height: 40px;
+    font-size: 18px;
+  }
+}
