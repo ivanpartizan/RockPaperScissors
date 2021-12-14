@@ -92,4 +92,5 @@ restartBtn.addEventListener("click", () => {
   computerScore = 0;
   userScoreElement.innerHTML = userScore;
   computerScoreElement.innerHTML = computerScore;
+  result.innerHTML = `Take Your Pick...`;
 });
