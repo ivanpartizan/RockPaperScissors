@@ -4,6 +4,15 @@ const introScreen = document.querySelector(".intro");
 const game = document.querySelector(".game");
 const options = document.querySelectorAll(".option");
 const result = document.querySelector(".result");
+
+let userScore = 0;
+let computerScore = 0;
+const userScoreElement = document.querySelector("#userScore");
+const computerScoreElement = document.querySelector("#computerScore");
+
+const userScoreBtn = document.querySelector("#userScoreBtn");
+const computerScoreBtn = document.querySelector("#computerScoreBtn");
+
 options.forEach((option) => option.addEventListener("click", play));
 
 function userPick(e) {
@@ -30,10 +39,13 @@ function play(e) {
     case "paperspock":
     case "spockrock":
     case "rockscissors":
-      console.log("You win");
       result.innerHTML = `${user[0].toUpperCase() + user.slice(1)} beats ${
         computer[0].toUpperCase() + computer.slice(1)
-      }, you win`;
+      }, you win!`;
+      userScore++;
+      userScoreElement.innerHTML = userScore;
+      userScoreBtn.classList.add("glow");
+      setTimeout(() => userScoreBtn.classList.remove("glow"), 750);
       break;
 
     case "paperscissors":
@@ -46,10 +58,13 @@ function play(e) {
     case "spockpaper":
     case "rockspock":
     case "scissorsrock":
-      console.log("You lose");
       result.innerHTML = `${
         computer[0].toUpperCase() + computer.slice(1)
-      } beats ${user[0].toUpperCase() + user.slice(1)}, you lose`;
+      } beats ${user[0].toUpperCase() + user.slice(1)}, you lose!`;
+      computerScore++;
+      computerScoreElement.innerHTML = computerScore;
+      computerScoreBtn.classList.add("glow");
+      setTimeout(() => computerScoreBtn.classList.remove("glow"), 750);
       break;
 
     case "rockrock":
@@ -57,10 +72,9 @@ function play(e) {
     case "scissorsscissors":
     case "lizardlizard":
     case "spockspock":
-      console.log("You draw");
       result.innerHTML = `${user[0].toUpperCase() + user.slice(1)} equals ${
         computer[0].toUpperCase() + computer.slice(1)
-      }, it's a draw`;
+      }, it's a draw!`;
       break;
   }
 }
@@ -74,4 +88,8 @@ playBtn.addEventListener("click", () => {
 restartBtn.addEventListener("click", () => {
   game.classList.remove("fadeIn");
   introScreen.classList.add("fadeIn");
+  userScore = 0;
+  computerScore = 0;
+  userScoreElement.innerHTML = userScore;
+  computerScoreElement.innerHTML = computerScore;
 });

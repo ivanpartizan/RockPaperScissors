@@ -72,7 +72,7 @@ header h1 {
   padding: 15px 20px;
   width: 166px;
   height: 50px;
-  border: transparent;
+  border: none;
   border-radius: 10px;
   outline: none;
   background: #00ffdb;
@@ -113,6 +113,7 @@ header h1 {
   align-items: center;
   justify-content: center;
   margin: 1%;
+  border: 5px solid #0f1115;
 }
 
 .restartBtn {
@@ -133,6 +134,11 @@ div.fadeOut {
 div.fadeIn {
   opacity: 1;
   pointer-events: all;
+}
+
+.glow {
+  box-shadow: 0 0 10px green;
+  transform: scale(1.1);
 }
 
 @media (max-width: 800px) {
